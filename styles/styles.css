@@ -3,8 +3,6 @@
     margin: 0;
 }
 :root{
-    /* --Linear gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%) //(active input border):  */
-
     /* (input errors) */
     --active-input: hsl(249, 99%, 64%);
     --active-input2: hsl(278, 94%, 30%);
@@ -24,11 +22,9 @@ body{
 }
 #container{
     height: 100vh;
-    /* max-width: 80rem; */
     display: flex;
     width: 100vw;
     align-items: center;
-    /* border: 9px solid lightblue; */
     margin: 0 auto;
 }
 input{
@@ -47,9 +43,10 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 4px solid rebeccapurple; */
+    border: 1px solid green;
     gap: 8rem;
-    /* max-width: 80rem; */
+    padding: 1rem;
+    max-width: 80rem;
     margin: 0 auto;
 }
 #card-form > *{
@@ -60,9 +57,12 @@ input:focus{
 .card-info{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 2rem;
     color: var(--White);
-    width: 35rem;
+    max-width: 35rem;
+    border: 1px solid blue;
+    width: 100%;
 }
 .card-info > *{
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -78,9 +78,6 @@ input:focus{
     justify-content: space-between;
     width: 447px;
     height: 245px;
-}
-.card-front > * {
-    /* border: 1px solid green; */
 }
 .card-front .card-front-data {
     display: flex;
@@ -106,7 +103,8 @@ span#card-name{
     background-image: url('../images/bg-card-back.png');
     background-repeat: no-repeat;
     padding: 1.2rem;
-    width: 447px;
+    max-width: 447px;
+    width: 100%;
     height: 245px;
 }
 .card-back{
@@ -128,10 +126,9 @@ form{
     flex-direction: column;
     padding: 1rem;
     gap: 1.5rem;
-    background-color: white;
     max-width: 30rem;
     width: 100%;
-    /* border: 1px solid rgb(57, 86, 14); */
+    border: 1px solid rgb(57, 86, 14);
 }
 form > div:not(.form-3rd-row){
     display: flex;
@@ -148,7 +145,6 @@ form div.form-3rd-row{
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    /* border: 1px solid rosybrown; */
     flex: 1;
 }
 .form-exp-date{
@@ -178,8 +174,29 @@ form button[type="submit"]{
 }
 
 @media screen and (max-width: 1000px){
+    #container{
+        height: auto;
+    }
     #card-form{
-        /* background-color: red; */
         flex-direction: column;
+        gap: 2rem;
+    }
+    .card-form{
+        width: 100%;
+    }
+    body{
+        background-image: url('../images/bg-main-mobile.png');
+        background-size: contain;
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+    .card-front, .card-back{
+        width: 100%;
+    }
+    .card-back{
+        translate: none;
+    }
+    form div.form-3rd-row{  
+        display: block;
     }
 }
