@@ -43,7 +43,6 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
     gap: 8rem;
     padding: 1rem;
     max-width: 80rem;
@@ -61,7 +60,6 @@ input:focus{
     gap: 2rem;
     color: var(--White);
     max-width: 35rem;
-    border: 1px solid blue;
     width: 100%;
 }
 .card-info > *{
@@ -128,7 +126,6 @@ form{
     gap: 1.5rem;
     max-width: 30rem;
     width: 100%;
-    border: 1px solid rgb(57, 86, 14);
 }
 form > div:not(.form-3rd-row){
     display: flex;
